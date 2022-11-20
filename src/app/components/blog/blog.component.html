@@ -1,0 +1,48 @@
+<app-loading *ngIf="showLoading"></app-loading>
+<section class="blog" id="blogSection">
+  <div class="general-section-wrapper">
+    <p class="heading-text">MY BLOG.</p>
+    <hr class="heading-hr">
+    <p class="quote">Sharing what you have is caring ones who need it...</p>
+    <div class="blog-wrapper">
+      <div class="blog-container">
+        <div class="blog" *ngFor="let blog of filteredBlogs">
+          <img [src]="blog.fields.coverImage.fields.file.url" alt="">
+          <div class="title">
+            <p class="blog-title">{{blog.fields.title}}</p>
+            <p class="blog-info">
+              <span class="blog-category">{{blog.fields.category | uppercase}}</span>
+              /
+              <span class="blog-date">{{blog.fields.publishedDate | date: 'MMMM d, y'}}</span>
+            </p>
+          </div>
+          <p class="blog-brief">{{blog.fields.brief}}</p>
+          <a [routerLink]="blog.sys.id">READ MORE</a>
+        </div>
+      </div>
+      <div class="search-btn-container" id="searchBtnContainer">
+        <i-feather name="search" class="icon"></i-feather>
+      </div>
+      <div class="options" id="optionsDiv" #optionsDiv>
+        <div class="search">
+          <input type="text" #searchInput (keyup)="searchBlog(searchInput.value)" placeholder="SEARCH..."><i-feather name="search" class="icon"></i-feather>
+        </div>
+        <div class="categories">
+          <p class="heading-text">Categories</p>
+          <hr class="heading-hr-2">
+          <div class="category-container">
+            <a class="category active" (click)="filterByCategory('all', $event)">All</a>
+            <a class="category" *ngFor="let category of categories" (click)="filterByCategory(category, $event)">{{category}}</a>
+          </div>
+        </div>
+        <div class="achieves">
+          <p class="heading-text">Achieves</p>
+          <hr class="heading-hr-2">
+          <div class="achieve-container">
+            <a class="achieve" *ngFor="let achieve of achieves" (click)="filterByAchieve(achieve, $event)">{{achieve}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

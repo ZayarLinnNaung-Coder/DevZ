@@ -1,0 +1,28 @@
+section.blog-details{
+  .general-section-wrapper{
+    .coverImageContainer{
+      text-align: center;
+      .coverImage{
+        width: 100%;
+      }
+    }
+    .info{
+      text-align: center;
+      .blog-category{
+        background: var(--secondary-color);
+        padding: 5px 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .published-date{
+        color: var(--theme-primary-color);
+        span{color: var(--theme-primary-color)}
+      }
+    }
+    .content{
+      margin: 50px 0;
+      p{
+        margin-bottom: 100px !important;
+      }
+    }
+  }
+}

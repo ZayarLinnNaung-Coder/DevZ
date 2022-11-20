@@ -1,0 +1,41 @@
+<section class="resume-section" id="resumeSection">
+  <div class="general-section-wrapper">
+    <div class="about-me" id="aboutMe">
+      <div class="brief">
+        <p class="heading">ABOUT ME ...</p>
+        <hr class="heading-hr">
+        <p class="body">
+          I’m a Full Stack Developer based in Myanmar. I have about 2 year experience of Java and Angular.
+          I have a serious passion for UI effects, animations, creating intuitive, dynamic user experiences, secure, flexible, and maintainable web service.
+          <br><br>
+          I gain most of my knowledge from self-study, but some for joining classes.
+          So I am absolutely a fast learner and can work under pressure without much sweat.
+          <br><br>
+          Well-organised person, problem solver, independent employee with high attention to detail.
+          Fan of MMA, outdoor activities, TV series and English literature.
+
+        </p>
+        <a routerLink="/contact">Let's make something special...</a>
+      </div>
+      <div class="animated-text"></div>
+    </div>
+  </div>
+</section>
+<div class="down-btn" (click)="scrollDown()">
+  <i-feather class="feather-icon" name="chevrons-down"></i-feather>
+</div>
+<section class="life-passes">
+  <div class="general-section-wrapper">
+    <app-life-passes [title]="'EDUCATION'" [lifePassArray]="education"></app-life-passes>
+    <hr class="separator">
+    <app-life-passes [title]="'EXPERIENCE'" [lifePassArray]="experience"></app-life-passes>
+  </div>
+</section>
+
+<section class="skill">
+  <div class="general-section-wrapper">
+    <app-skills class="app-skill" [title]="'PROGRAMMING LANGUAGE'" [skills]="programmingLanguageSkills"></app-skills>
+    <br><br><br>
+    <app-skills class="app-skill" [title]="'DESIGN SKILL'" [skills]="designSkills"></app-skills>
+  </div>
+</section>

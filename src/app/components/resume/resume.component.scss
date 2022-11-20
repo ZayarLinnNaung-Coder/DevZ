@@ -1,0 +1,92 @@
+section.resume-section{
+  height: 90vh;
+  .general-section-wrapper{
+    .about-me{
+      height: 90vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      &.active{
+        height: 100vh;
+      }
+      .brief{
+        width: 50%;
+        .heading{
+          font-size: var(--text-ee-lg);
+        }
+        .body{
+          margin: 25px 0;
+          text-align: justify;
+        }
+        a{
+          color: var(--theme-primary-color);
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+      .animated-text{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    .section{
+      height: 200vh;
+      background-color: red;
+    }
+  }
+}
+
+section.life-passes{
+  background-color: var(--secondary-color);
+}
+
+section.skill{
+  padding: 75px 0;
+  .general-section-wrapper{
+    .app-skill{
+      margin-bottom: 25px;
+    }
+  }
+}
+hr.separator{
+  width: 200px;
+  height: 3px;
+  background-color: var(--theme-primary-color);
+  border: 0;
+  outline: none;
+  position: absolute;
+  left: 200px;
+}
+@media only screen and (max-width: 600px) {
+  section.resume-section{
+    .general-section-wrapper{
+      .about-me{
+        height: 100vh;
+        flex-direction: column-reverse;
+        flex-wrap: unset;
+        .brief{
+          width: 100%;
+          padding: 20px 0;
+        }
+        .animated-text{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .down-btn{
+    right: 15px !important;
+    left: unset;
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  hr.separator{
+    left: unset;
+    width: 130px;
+  }
+}

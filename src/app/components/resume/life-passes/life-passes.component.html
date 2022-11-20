@@ -1,0 +1,10 @@
+<div class="education">
+  <p class="heading-text">{{title}}</p>
+  <div class="card-container">
+    <div class="card" *ngFor="let lifePass of lifePassArray">
+      <p class="date">{{lifePass.date}}</p>
+      <p class="title">{{lifePass.title}}</p>
+      <p class="text">{{lifePass.body}}</p>
+    </div>
+  </div>
+</div>

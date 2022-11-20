@@ -1,0 +1,71 @@
+@import "../../../variable";
+
+header{
+  transition: background-color 0.5s;
+  &.active{
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--theme-primary-color);
+  }
+  z-index: 1000;
+  width: 100%;
+  .header-wrapper{
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .menu-icon{
+      color: var(--opposite-color);
+      display: none;
+    }
+    .links{
+      a{
+        padding: 5px 10px;
+        margin: 0 3px;
+        &:hover{
+          color: var(--theme-primary-color);
+          border-bottom: 1px solid var(--theme-primary-color);
+        }
+        &.active{
+          color: var(--theme-primary-color);
+          border-bottom: 1px solid var(--theme-primary-color);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  header{
+    position: fixed !important;
+    height: 10vh;
+    transition: 1s;
+    &.open{
+      height: 100vh;
+      background-color: var(--primary-color);
+      .header-wrapper {
+        .links {
+          width: 90%;
+          top: 100px;
+        }
+      }
+    }
+    width: 100%;
+    .header-wrapper{
+      .menu-icon{
+        display: inline-block;
+      }
+      .links{
+        transition: top 0.5s;
+        position: fixed;
+        top: -50%;
+        a{
+          display: inline-block;
+          width: 100%;
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}

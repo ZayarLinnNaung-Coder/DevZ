@@ -1,0 +1,16 @@
+<header id="header" #header>
+  <div class="header-wrapper special-wrapper">
+    <div class="icon">
+      <p class="icon-text">Dev<span>Z</span></p>
+    </div>
+    <i-feather *ngIf="!isOpenMode" name="menu" id="menu-icon" class="menu-icon" (click)="toggleNavbar()"></i-feather>
+    <i-feather *ngIf="isOpenMode" name="x" class="menu-icon" (click)="toggleNavbar()"></i-feather>
+    <div class="links">
+      <a routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
+      <a routerLink="/resume" routerLinkActive="active" (click)="toggleNavbar()">Resume</a>
+      <a routerLink="/project" routerLinkActive="active" (click)="toggleNavbar()">Project</a>
+      <a routerLink="/blog" routerLinkActive="active" (click)="toggleNavbar()">Blog</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact</a>
+    </div>
+  </div>
+</header>

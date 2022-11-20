@@ -1,0 +1,75 @@
+@import "variable";
+
+.custom-btn {
+  color: var(--theme-primary-color);
+  cursor: pointer;
+  font-size: $text-normal;
+  background-color: transparent;
+  // display: block;
+  line-height: 45px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  &.btn-1 {
+    border: 1px solid;
+    overflow: hidden;
+    position: relative;
+
+    span {
+      z-index: 20;
+      color: var(--theme-primary-color);
+    }
+
+    &:after {
+      background: var(--theme-primary-color);
+      content: "";
+      height: 155px;
+      left: -75px;
+      opacity: .2;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+      width: 50px;
+      z-index: 10;
+    }
+    &:hover {
+      &:after {
+        left: 120%;
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+  }
+  &.btn-2 {
+    border: 1px solid var(--opposite-color);
+    overflow: hidden;
+    position: relative;
+
+    span {
+      z-index: 20;
+      color: var(--opposite-color);
+    }
+
+    &:after {
+      background: var(--opposite-color);
+      content: "";
+      height: 155px;
+      left: -75px;
+      opacity: .2;
+      position: absolute;
+      top: -50px;
+      transform: rotate(35deg);
+      transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+      width: 50px;
+      z-index: 10;
+    }
+    &:hover {
+      &:after {
+        left: 120%;
+        transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+  }
+}

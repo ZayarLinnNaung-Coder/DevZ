@@ -1,0 +1,39 @@
+<section class="project" id="projectSection">
+    <div class="general-section-wrapper">
+      <p class="heading-text">SOME THINGS I'VE BUILT</p>
+      <hr class="heading-hr">
+      <div class="link-container">
+        <a class="link active" (click)="filterProductByCategory('', $event)">ALL</a>
+        <a class="link" *ngFor="let projectCategory of projectCategoryList"
+           (click)="filterProductByCategory(projectCategory.id, $event)">{{projectCategory.name | uppercase}}</a>
+<!--        <a class="link" (click)="filterProductByCategory('business', $event)">BUSINESS</a>-->
+<!--        <a class="link" (click)="filterProductByCategory('portfolio', $event)">PORTFOLIO</a>-->
+<!--        <a class="link" (click)="filterProductByCategory('blog', $event)">BLOG</a>-->
+<!--        <a class="link" (click)="filterProductByCategory('others', $event)">OTHERS</a>-->
+      </div>
+      <div class="project-container">
+        <div class="no-product-found" *ngIf="projectList.length == 0">
+          <p>NO PRODUCT FOUND</p>
+        </div>
+        <div class="project" *ngFor="let project of filterProjectList | paginate: { itemsPerPage: 4, currentPage: p }">
+          <div class="image">
+            <img [src]="project.imageLink" alt="">
+          </div>
+          <div class="brief">
+            <div class="heading">
+              <p class="text">{{project.title}}</p>
+              <div class="links">
+                <a *ngIf="project.gitLink" [href]="project.gitLink"><i-feather name="github" class="feather-icon icon"></i-feather></a>
+                <a *ngIf="project.externalLink" [href]="project.externalLink"><i-feather name="external-link" class="feather-icon icon"></i-feather></a>
+              </div>
+            </div>
+            <p class="body">{{project.description}}</p>
+          </div>
+          <div class="tech-container">
+            <div class="tech" *ngFor="let tech of project.technologyList"><span>{{tech}}</span></div>
+          </div>
+        </div>
+      </div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</section>

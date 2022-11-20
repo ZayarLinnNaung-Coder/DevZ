@@ -1,0 +1,130 @@
+@import "src/variable";
+
+.options{
+  position: fixed;
+  top: 60%;
+  right: 0;
+  transform: translateY(-50%);
+  //border: 1px solid var(--theme-primary-color);
+
+  .option{
+    width: 45px;
+    height: 45px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    //border-bottom: 1px solid var(--theme-primary-color);
+    .feather-icon{
+      color: var(--theme-primary-color) !important;
+      &.theme-color-icon{
+        fill: var(--theme-primary-color) !important;
+      }
+    }
+    &:hover{
+      transform: translateX(-10px);
+    }
+  }
+}
+.social-wrapper{
+  position: fixed;
+  bottom: 0;
+  left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .social-media-container{
+    display: flex;
+    flex-direction: column;
+    .social-media{
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5px;
+      transition: 0.3s;
+      &:hover{
+        background-color: var(--opposite-color);
+        color: var(--primary-color);
+      }
+    }
+  }
+  .bar{
+    width: 5px;
+    height: 100px;
+    background-color: var(--opposite-color);
+  }
+}
+.theme-color-chooser.active{
+  max-width: 70%;
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5px );
+  -webkit-backdrop-filter: blur( 5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 25px;
+  .color{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 5px;
+    transition: width 0.3s, height 0.3s;
+    &:hover{
+      cursor: pointer;
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .social-wrapper {
+    left: 2rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .social-wrapper {
+    left: -2rem;
+    transition: left 0.5s;
+    background-color: var(--border-color);
+    .social-media-container{
+      visibility: hidden;
+      .social-media{
+        color: var(--opposite-color);
+      }
+    }
+    .bar{
+      background-color: var(--opposite-color);
+      visibility: hidden;
+    }
+    &.active{
+      left: 0rem;
+      .social-media-container{
+        visibility: unset;
+      }
+      .bar{
+        visibility: unset;
+      }
+    }
+  }
+}
+
+
+@keyframes down-up {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-10px);
+  }
+}

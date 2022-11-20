@@ -1,0 +1,14 @@
+<app-loading *ngIf="showLoading"></app-loading>
+<section class="blog-details">
+  <div class="general-section-wrapper">
+    <div class="coverImageContainer">
+      <img [src]="blog?.coverImage?.fields?.file?.url" alt="" class="coverImage">
+    </div>
+    <div class="info">
+      <p class="heading-text blog-title">{{blog?.title}}</p>
+      <a class="blog-category" href="#">{{blog?.category}}</a>
+      <p class="published-date">Publish Date: <span> {{blog?.publishedDate | date: 'MMMM d, y'}} </span> </p>
+    </div>
+    <div class="content" [innerHTML]="convertToHtml(blog?.content)"></div>
+  </div>
+</section>

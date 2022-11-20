@@ -1,0 +1,32 @@
+<app-loading *ngIf="showLoading"></app-loading>
+<section class="featured-project">
+  <div class="featured-project-wrapper general-section-wrapper">
+    <p class="heading-text">Featured Projects</p>
+    <hr class="heading-hr">
+    <p class="my-quotes"><span>“Talk is cheap. Show me the code?"</span> I got you. <br>
+      Here are some of my projects you shouldn't misss</p>
+    <div class="project-container">
+      <div class="project" *ngFor="let project of projects">
+        <div class="image">
+          <img [src]="project.imageLink" alt="">
+        </div>
+        <div class="brief">
+          <div class="heading">
+            <p class="text">{{project.title}}</p>
+            <div class="links">
+              <a *ngIf="project.gitLink" [href]="project.gitLink"><i-feather name="github" class="feather-icon icon"></i-feather></a>
+              <a *ngIf="project.externalLink" [href]="project.externalLink"><i-feather name="external-link" class="feather-icon icon"></i-feather></a>
+            </div>
+          </div>
+          <p class="body" [innerText]="project.description"></p>
+        </div>
+        <div class="tech-container">
+          <div class="tech" *ngFor="let tech of project.technologyList">
+            <span [innerText]="tech"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a [routerLink]="'/project'" class="custom-btn btn-1"><span>VIEW PROJECTS</span></a>
+  </div>
+</section>

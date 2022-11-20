@@ -1,0 +1,9 @@
+<p class="heading-text">{{title}}</p>
+<div class="skill-container">
+  <div *ngFor="let skill of skills" class="skill">
+    <p class="title">{{skill.name}}</p>
+    <div class="progress-outer">
+      <div class="progress-inner" [style.width]="skill.progress + '%'" ></div>
+    </div>
+  </div>
+</div>

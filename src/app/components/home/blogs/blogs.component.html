@@ -1,0 +1,27 @@
+<app-loading *ngIf="showLoading"></app-loading>
+<section class="blog">
+  <div class="general-section-wrapper">
+    <p class="heading-text">Sharing is Caring</p>
+    <hr class="heading-hr">
+    <p class="brief-title">
+      I write blog posts about what I've done and what I'm doing
+      as a documenting practice. <br> Here are some of my recent blog posts.
+    </p>
+    <div class="blog-container">
+      <div class="blog" *ngFor="let blog of blogs" [routerLink]="['/blog', blog.sys.id]">
+        <div class="image">
+          <img [src]="blog.fields.coverImage.fields.file.url" alt="">
+        </div>
+        <div class="info">
+          <p class="title" [innerText]="blog.fields.title"></p>
+          <p class="date">
+            <i-feather name="calendar" class="feather-icon"></i-feather>
+            {{blog.fields.publishedDate | date: 'MMMM d, y'}}
+          </p>
+          <p class="brief" [innerText]="blog.fields.brief"></p>
+        </div>
+      </div>
+    </div>
+    <a [routerLink]="'/blog'" class="custom-btn btn-1"><span>VIEW BLOG</span></a>
+  </div>
+</section>
