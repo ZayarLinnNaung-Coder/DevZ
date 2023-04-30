@@ -15,8 +15,12 @@ export class BlogService {
     accessToken: env.accessToken
   })
 
+  private filterQuery = {
+    content_type: env.devz
+  };
+
   getAllBlogs(){
-    return from(this.client.getEntries());
+    return from(this.client.getEntries(this.filterQuery));
   }
 
   getBlogById(blogId: string){
