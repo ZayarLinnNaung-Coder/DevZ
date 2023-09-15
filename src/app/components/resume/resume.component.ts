@@ -21,11 +21,6 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
     this.education = [
       new LifePasses(
-        '2016-Current',
-        'Technological University - Hmawbi',
-        'Currently studying specialized in IT with strong passionate'
-      ),
-      new LifePasses(
         '2020-2021',
         'Y-Max University',
         'Achieved Diploma in Ethical Hacking and Cyber Security from NCFE based in UK'
@@ -34,6 +29,16 @@ export class ResumeComponent implements OnInit {
         '2021-2021',
         'MMS One Stop IT Solutions',
         'Successfully completed Basic Web Design (BWD) and Special Web Design (SWD)'
+      ),
+      new LifePasses(
+        '2016-Leave',
+        'Technological University - Hmawbi',
+        'I had to halt TU due to Myanmar coup as a third year student. The impact on the university was profound. The academic environment became increasingly challenging as students.'
+      ),
+      new LifePasses(
+        '2023-Current',
+        'NCC Education, UK',
+        'I’m currently in level 4 diploma in computing for NCC education.'
       )
     ]
 

@@ -9,7 +9,30 @@ import {Project} from "../model/Project";
 export class ProjectService {
 
   private defaultUrl = 'http://localhost:8080/projects';
+
   private projects: Project[] = [
+    new Project(
+      "https://i.ibb.co/x7t1Bys/webserver.jpg",
+      "ZWebServer",
+      "Custom web server with thread per request model using pure Java",
+      [
+        "Java"
+      ],
+      "https://github.com/ZayarLinnNaung-Coder/ZWebServer",
+      "",
+      "C001"
+    ),
+    new Project(
+      "https://i.ibb.co/fGxxdZz/Asset-1-100.jpg",
+      "ZORM - Framework",
+      "Mini framework inspired from Hibernate and JPA. Developed without any orm libraries or based but in pure Java",
+      [
+        "Java"
+      ],
+      "https://github.com/ZayarLinnNaung-Coder/Z_ORM",
+      "",
+      "C001"
+    ),
     new Project(
       "https://user-images.githubusercontent.com/84829442/202894698-66c6ef96-9fa6-4653-ba30-32cbd73b8a38.gif",
       "ZCMS - FullStack",
@@ -94,4 +117,5 @@ export class ProjectService {
   getAllProjects(): Observable<Project[]>{
     return of(this.projects);
   }
+
 }
