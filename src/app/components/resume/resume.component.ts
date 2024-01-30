@@ -21,42 +21,37 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
     this.education = [
       new LifePasses(
+        '2023-Current',
+        'NCC Education, UK',
+        'I’m currently in level 4 diploma in computing for NCC education.'
+      ),
+      new LifePasses(
         '2020-2021',
         'Y-Max University',
         'Achieved Diploma in Ethical Hacking and Cyber Security from NCFE based in UK'
       ),
       new LifePasses(
-        '2021-2021',
-        'MMS One Stop IT Solutions',
-        'Successfully completed Basic Web Design (BWD) and Special Web Design (SWD)'
-      ),
-      new LifePasses(
-        '2016-Leave',
+        '2016-2019',
         'Technological University - Hmawbi',
-        'I had to halt TU due to Myanmar coup as a third year student. The impact on the university was profound. The academic environment became increasingly challenging as students.'
+        '...'
       ),
-      new LifePasses(
-        '2023-Current',
-        'NCC Education, UK',
-        'I’m currently in level 4 diploma in computing for NCC education.'
-      )
     ]
 
     this.experience = [
       new LifePasses(
-        '2016-Current',
-        'Online',
-        'I study continuously by making projects or sometimes from tutorials and documentations.'
+        '2022 May - Current / ACEPlus Software Company',
+        'Senior Software Engineer',
+        'Develop and maintain the enterprise insurance systems use in famous companies like Myanma Insurance, FNI, GGI, EFI and many others'
       ),
       new LifePasses(
-        '2020 May-2020 July',
-        'Technological University (Hmawbi)',
-        'Leading for creating encrypt/decrypt algorithm named DES without any frameworks or library for 6th BE thesis.'
+        '2021 MAR - 2022 APR / NMax Digital Solution',
+        'Junior Java Developer',
+        'Especially develop API for developing various web applications'
       ),
       new LifePasses(
-        '2022-Current',
-        'ACEPlus Software Company',
-        'Joined as a Java Developer for insurance systems'
+        '2020 OCT - 2021 MAR / Ace Inspiration',
+        'Java Developer (Intern)',
+        'Developed sample projects and learnt Spring, Spring Boot, Rest API'
       )
     ]
 
