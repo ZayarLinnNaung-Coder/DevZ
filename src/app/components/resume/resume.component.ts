@@ -21,37 +21,32 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
     this.education = [
       new LifePasses(
-        '2023-Current',
-        'NCC Education, UK',
-        'I’m currently in level 4 diploma in computing for NCC education.'
+        '2014-2019',
+        'Bachelor of Engineering (Information Technology)',
+        ''
       ),
       new LifePasses(
         '2020-2021',
         'Y-Max University',
         'Achieved Diploma in Ethical Hacking and Cyber Security from NCFE based in UK'
-      ),
-      new LifePasses(
-        '2016-2019',
-        'Technological University - Hmawbi',
-        '...'
-      ),
+      )
     ]
 
     this.experience = [
       new LifePasses(
-        '2022 May - Current / ACEPlus Software Company',
+        '2024 MAR - Current / WaveMoney Myanmar',
+        'Platform Engineer',
+        'Design and build platform features and required APIs for one of the biggest fintech company in Myanmar.'
+      ),
+      new LifePasses(
+        '2022 May - 2024 MAR / ACEPlus Software Company',
         'Senior Software Engineer',
         'Develop and maintain the enterprise insurance systems use in famous companies like Myanma Insurance, FNI, GGI, EFI and many others'
       ),
       new LifePasses(
-        '2021 MAR - 2022 APR / NMax Digital Solution',
+        '2019 APR - 2022 MAY / Root.Studio',
         'Junior Java Developer',
-        'Especially develop API for developing various web applications'
-      ),
-      new LifePasses(
-        '2020 OCT - 2021 MAR / Ace Inspiration',
-        'Java Developer (Intern)',
-        'Developed sample projects and learnt Spring, Spring Boot, Rest API'
+        'Responsible for the development and deployment of various web applications, including an e-commerce platform, blogging platform, and many others.'
       )
     ]
 
