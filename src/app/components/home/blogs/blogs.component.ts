@@ -15,6 +15,8 @@ export class BlogsComponent implements OnInit {
   constructor(private blogService: BlogService, private router: Router) { }
 
   ngOnInit(): void {
+
+    this.showLoading = false;
     this.blogService.getAllBlogs().subscribe(
       blogs => {
         this.blogs = blogs.items.slice(0, 4);

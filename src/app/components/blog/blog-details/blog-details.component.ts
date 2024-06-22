@@ -34,6 +34,8 @@ export class BlogDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const blogId = this.activatedRoute.snapshot.paramMap.get("id");
+    
+    this.showLoading = false;
     this.blogService.getBlogById(blogId).subscribe(blog => {
       this.blog = blog.fields;
       this.showLoading = false;

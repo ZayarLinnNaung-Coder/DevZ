@@ -20,6 +20,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.showLoading = false;
     this.blogService.getAllBlogs().subscribe(entries => {
       this.blogs$ = entries.items;
       this.filteredBlogs = this.blogs$.sort(

@@ -20,10 +20,12 @@ export class BlogService {
   };
 
   getAllBlogs(){
+    console.log("ALL")
     return from(this.client.getEntries(this.filterQuery));
   }
 
   getBlogById(blogId: string){
+    console.log("By ID")
     return from(this.client.getEntry(blogId));
   }
 
