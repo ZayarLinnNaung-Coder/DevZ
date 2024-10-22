@@ -14,12 +14,17 @@ export class ResumeComponent implements OnInit {
   experience: LifePasses[] = [];
 
   programmingLanguageSkills: Skill[] = [];
-  designSkills: Skill[] = [];
+  otherSkills: Skill[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
     this.education = [
+      new LifePasses(
+        '2023-Current',
+        'Bachelor of Engineering (NCC Education)',
+        'Joined the NCC Education since 2023'
+      ),
       new LifePasses(
         '2016-2019',
         'Bachelor of Engineering (Information Technology)',
@@ -34,7 +39,12 @@ export class ResumeComponent implements OnInit {
 
     this.experience = [
       new LifePasses(
-        '2024 MAR - Current / WaveMoney Myanmar',
+        '2024 AUG - Current / PIITS Singapore (Remote)',
+        'Software Engineer',
+        'Join and develop as a remote full stack developer for various projects.'
+      ),
+      new LifePasses(
+        '2024 MAR - 2024 AUG / WaveMoney Myanmar',
         'Platform Engineer',
         'Design and build platform features and required APIs for one of the biggest fintech company in Myanmar.'
       ),
@@ -51,23 +61,17 @@ export class ResumeComponent implements OnInit {
     ]
 
     this.programmingLanguageSkills = [
-      new Skill('HTML', 80),
-      new Skill('CSS', 78),
-      new Skill('Javascript', 68),
-      new Skill('Bootstrap', 75),
-      new Skill('jQuery', 65),
+      new Skill('Vue', 60),
       new Skill('Angular', 70),
       new Skill('Spring', 65),
-      new Skill('Spring Boot', 70),
+      new Skill('Spring Boot', 80),
+      new Skill('Go', 50),
     ];
 
-    this.designSkills = [
-      new Skill('Adobe Illustrator', 80),
-      new Skill('Adobe Photoshop', 75),
-      new Skill('Figma', 70),
-      new Skill('Adobe XD', 70),
+    this.otherSkills = [
+      new Skill('AWS', 40),
+      new Skill('Architecture and Design', 60)
     ]
-
 
     let aboutMeClassList = document.getElementById('aboutMe')!.classList;
     window.addEventListener('scroll', () => {
